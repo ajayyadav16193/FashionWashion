@@ -42,7 +42,7 @@
                                         <h4 class="modal-title" style="text-align:center; margin-top:10px;">Add New Product</h4>
                                     </div>
                                     <div class="modal-body">
-                                        <form id="produtFormData" method="post">
+                                        <form id="produtFormData" method="post" enctype="multipart/form-data">
                                             <label for="Product">Enter Product : </label><br>
                                             <input type="text" name="prod_name" id="prod_name" required="">
                                             <div id="name_error"></div>
@@ -160,7 +160,7 @@
                         </div>
 
                         <!--/#btn-controls-->
-                        <div class="module">
+                        <!-- <div class="module">
                             <div class="module-head">
                                 <h3>
                                     Profit Chart</h3>
@@ -171,7 +171,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <!--/.content-->

@@ -97,7 +97,7 @@
                             <td>${++sno}</td>
                             <td>${row.id}</td>
                             <td>${row.categories}</td>
-                            ${row.status === '1' ? `<td><button class="btn btn-success" onclick="cat_status(${row.id},${row.status})">Active</button></td>` : `<td><button class="btn btn-danger" onclick="cat_status(${row.id},${row.status})">deactive</button></td>`}                    
+                            ${row.status === '1' ? `<td><button class="btn btn-success" onclick="cat_status(${row.id},${row.status})">Active</button></td>` : `<td><button class="btn btn-warning" onclick="cat_status(${row.id},${row.status})">Deactive</button></td>`}                    
                             <td><button class="btn btn-primary" onclick='cat_edit("${row.id}")'>Edit</button></td>
                             <td><button class="btn btn-danger" onclick='cat_delete("${row.id}")'>Delete</button></td>  
                         </tr>`
@@ -212,11 +212,7 @@
                             <td>${row.price}</td>
                             <td>${row.qty}</td>
                             
-                            if(${row.status} == 1){
-                                <td><button class="btn btn-success" onclick='prod_status(${row.id},${row.status})'>Active</button></td>
-                            }else{
-                                <td><button class="btn btn-danger" onclick='prod_status(${row.id},${row.status})'>Deactive</button></td>
-                            }
+                            ${row.status === '1' ? `<td><button class="btn btn-success" onclick="cat_status(${row.id},${row.status})">Active</button></td>` : `<td><button class="btn btn-warning" onclick="cat_status(${row.id},${row.status})">Deactive</button></td>`}                    
                             <td><button class="btn btn-primary" onclick='prod_edit("${row.id}")'>Edit</button></td>
                             <td><button class="btn btn-danger" onclick='prod_delete("${row.id}")'>Delete</button></td>   
                         </tr>`				

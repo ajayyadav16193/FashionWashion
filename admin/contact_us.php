@@ -68,7 +68,7 @@
                             </div>
 
                             <!--/#btn-controls-->
-                            <div class="module">
+                            <!-- <div class="module">
                                 <div class="module-head">
                                     <h3>
                                         Profit Chart</h3>
@@ -79,7 +79,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                     <!--/.content-->
