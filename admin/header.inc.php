@@ -81,7 +81,7 @@
                                 <li class="active"><a href="dashboard.php"><i class="menu-icon icon-dashboard"></i>Dashboard
                                 </a></li>
                                 <li><a href="categories.php"><i class="menu-icon icon-bullhorn"></i>Categories</a></li>
-                                <li><a href="products.php"><i class="menu-icon icon-inbox"></i>Products</a></li>
+                                <li><a href="products.php"><i class="menu-icon icon-inbox"></i>Product Master</a></li>
                                 <li><a href="orders.php"><i class="menu-icon icon-inbox"></i>Order Master</a></li>
                                 <li><a href="users.php"><i class="menu-icon icon-inbox"></i>User Master</a></li>
                                 <li><a href="contact_us.php"><i class="menu-icon icon-inbox"></i>Contact Us</a></li>

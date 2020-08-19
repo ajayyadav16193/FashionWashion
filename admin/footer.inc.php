@@ -110,7 +110,23 @@
     loadCategories();
 
     function cat_status(id,status) {
-        console.log(id,status);
+
+        let statusData = {
+            cat_id : id,
+            cat_status : status
+        }
+
+        let url = 'http://localhost/fashionwashion/admin/categoryStatus.php';
+
+        $.ajax({
+            type : 'POST',
+            url : url,
+            data : statusData,
+            success : (sdata) => { }
+        })
+
+        loadCategories();
+
     }
 
     function cat_edit(id) {
@@ -125,7 +141,6 @@
                 data : updata,
                 success : udata => {
                     let result = JSON.parse(udata);
-                    // console.log(result);
                     $("#cat_upid").val(result[0].id);
                     $("#cat_upname").val(result[0].categories);
                 }
@@ -170,7 +185,7 @@
                 data : data,
                 success : ddata => {
                     let result = JSON.parse(ddata);
-                    console.log(result);
+
                     if( result === "Record deleted Successfully"){
                         $('#cat_DelModal').modal("hide");
                         $('#deleteModal').modal("show");
@@ -200,7 +215,6 @@
 
 				result.forEach((row,i) => {
                     
-                    // console.log(row.status);
 					output +=	
                         `<tr>
                             <td>${++sno}</td>
@@ -212,7 +226,7 @@
                             <td>${row.price}</td>
                             <td>${row.qty}</td>
                             
-                            ${row.status === '1' ? `<td><button class="btn btn-success" onclick="cat_status(${row.id},${row.status})">Active</button></td>` : `<td><button class="btn btn-warning" onclick="cat_status(${row.id},${row.status})">Deactive</button></td>`}                    
+                            ${row.status === '1' ? `<td><button class="btn btn-success" onclick="prod_status(${row.id},${row.status})">Active</button></td>` : `<td><button class="btn btn-warning" onclick="prod_status(${row.id},${row.status})">Deactive</button></td>`}                    
                             <td><button class="btn btn-primary" onclick='prod_edit("${row.id}")'>Edit</button></td>
                             <td><button class="btn btn-danger" onclick='prod_delete("${row.id}")'>Delete</button></td>   
                         </tr>`				
@@ -225,7 +239,22 @@
     loadProducts();
 
     function prod_status(id,status) {
-        console.log(id,status);
+
+        let statusData = {
+            prod_id : id,
+            prod_status : status
+        }
+
+        let url = 'http://localhost/fashionwashion/admin/productStatus.php';
+
+        $.ajax({
+            type : 'POST',
+            url : url,
+            data : statusData,
+            success : (pdata) => { }
+        })
+
+        loadProducts();
     }
 
     function prod_edit(id) {
@@ -240,7 +269,7 @@
                 data : updata,
                 success : udata => {
                     let result = JSON.parse(udata);
-                    // console.log(result);
+
                     $("#prod_upid").val(result[0].id);
                     $("#prod_upname").val(result[0].prodegories);
                 }
@@ -256,7 +285,7 @@
                 data : upddata,
                 success : updata => {
                     let result = JSON.parse(updata);
-                     console.log(result);
+
                     if( result.status == 'True'){
                         $("#btn-prod-update").modal("hide");
                         $("#prod_up_AckModal").modal("show");
@@ -285,7 +314,7 @@
                 data : data,
                 success : ddata => {
                     let result = JSON.parse(ddata);
-                    console.log(result);
+
                     if( result === "Record deleted Successfully"){
                         $('#prod_delModal').modal("hide");
                         $('#prod_del_AckModal').modal("show");
@@ -351,7 +380,7 @@
                 data : data,
                 success : ddata => {
                     let result = JSON.parse(ddata);
-                    console.log(result);
+
                     if( result === "Record deleted Successfully"){
                         $('#CU_DelModal').modal("hide");
                         $('#CU_delete_AckModal').modal("show");
