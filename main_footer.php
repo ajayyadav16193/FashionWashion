@@ -64,7 +64,7 @@
             <div class="col-lg-4 col-md-6 col-sm-7">
                 <div class="footer__about">
                     <div class="footer__logo">
-                        <a href="asset_main/index.php"><img src="asset_main/img/logo.png" alt=""></a>
+                        <a href="index.php"><img src="asset_main/img/logo_transparent.png" style="width:fit-content; height:40px;" alt=""></a>
                     </div>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                     cilisis.</p>
@@ -120,7 +120,7 @@
             <div class="col-lg-12">
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                 <div class="footer__copyright__text">
-                    <p>Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved | Website Devloped <i class="fa fa-heart" aria-hidden="true"></i> by Ajay Kumar Yadav</p>
+                    <p>Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved | Website Devloped by <i class="fa fa-heart" aria-hidden="true"></i> <strong> Ajay Kumar Yadav</strong></p>
                 </div>
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             </div>
@@ -151,6 +151,7 @@
 <script src="asset_main/js/owl.carousel.min.js"></script>
 <script src="asset_main/js/jquery.nicescroll.min.js"></script>
 <script src="asset_main/js/main.js"></script>
+<script src="asset_main/js/custom.js"></script>
 </body>
 
 </html>
